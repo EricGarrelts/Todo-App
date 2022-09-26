@@ -52,3 +52,13 @@
 .high {
   border-color: red;
 }
+
+.new {
+  border-color: blueviolet;
+  height: 20rem;
+}
+
+.textarea {
+  resize: none;
+  min-height: 8rem;
+}

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import styles from "../../styles/Cards.module.css";
 import Card from "../Card/Card";
+import NewCard from "../Card/NewCard";
 
 type Props = {};
 
 export default function Cards({}: Props) {
   const [sortToggle, setSortToggle] = useState(false);
   const [currentSort, setCurrentSort] = useState("date added");
+  const [newCard, setNewCard] = useState(false);
 
   function handleSort() {
     setSortToggle(!sortToggle);
@@ -17,10 +19,16 @@ export default function Cards({}: Props) {
     setSortToggle(false);
   }
 
+  function createCard() {
+    setNewCard(!newCard);
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.newcard}>New Card</div>
+        <div className={styles.newcard} onClick={createCard}>
+          New Card
+        </div>
         <div
           onClick={handleSort}
           className={`${styles.noselect} ${styles.button}`}
@@ -46,20 +54,8 @@ export default function Cards({}: Props) {
 
       {/* Cards*/}
       <div className={styles.cardcontainer}>
+        {newCard ? <NewCard createCard={createCard} /> : ""}
         <Card priority={0} title="Lorem ipsum" description="test 123123123" />
-        <Card
-          priority={2}
-          title="sdfsdfsdfsdffsdfsdfsdfsdfsdfsd ipsum"
-          description="test 123123123"
-        />
-        <Card priority={0} title="Lorem ipsum" description="test 123123123" />
-        <Card priority={0} title="Lorem ipsum" description="test 123123123" />
-        <Card priority={1} title="Lorem ipsum" description="test 123123123" />
-        <Card
-          priority={0}
-          title="Lorem ipsum"
-          description="test 123123123test 123123123test test 123123123 test 123123123test 123123123test test 123123123test 123123123test 123123123test test 123123123test 123123123test 123123123test test 123123123test 123123123test 123123123test test 123123123test 123123123test 123123123test test 123123123"
-        />
       </div>
     </div>
   );
