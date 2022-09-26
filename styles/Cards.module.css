@@ -1,0 +1,78 @@
+.container {
+  background-color: #888888;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.header {
+  height: 4rem;
+  border-style: double;
+  border-width: 0px 0px 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 1rem 0px 1rem;
+  gap: 1rem;
+  font-weight: 600;
+  font-size: larger;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.newcard {
+  border-style: solid;
+  cursor: pointer;
+  padding: 4px 6px 4px 6px;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.newcard:hover {
+  background-color: greenyellow;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.sortcontainer {
+  position: absolute;
+  bottom: -8rem;
+  padding: 1rem;
+  right: 1rem;
+  width: 9rem;
+  background-color: white;
+  font-weight: 400;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-style: solid;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.pointer:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.cardcontainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
