@@ -47,7 +47,7 @@ export default function Card(props: Props) {
             description={props.description}
           />
           <div className={styles.footer}>
-            <div className={styles.edit} onClick={() => handleEdit}>
+            <div className={styles.edit} onClick={handleEdit}>
               Exit
             </div>
             <div
