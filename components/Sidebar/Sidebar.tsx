@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styles from "../../styles/Sidebar.module.css";
 
@@ -17,12 +18,12 @@ export default function Sidebar({}: Props) {
       <div className={styles.footer}>
         <p>Developed by Eric Garrelts</p>
         <div className={styles.linkcontainer}>
-          <a href="https://www.linkedin.com/in/ericgarrelts/" target="_blank">
-            LinkedIn
-          </a>
-          <a href="https://github.com/EricGarrelts/Todo-App" target="_blank">
-            Source Code
-          </a>
+          <Link href="https://www.linkedin.com/in/ericgarrelts/">
+            <a target="_blank">LinkedIn</a>
+          </Link>
+          <Link href="https://github.com/EricGarrelts/Todo-App">
+            <a target="_blank">Source Code</a>
+          </Link>
         </div>
       </div>
     </div>
