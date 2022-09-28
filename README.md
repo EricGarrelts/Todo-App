@@ -7,7 +7,7 @@ A multi-purpose Todo application to organize a user's day by offering organizati
 - [Next.js](https://nextjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 
-## Initalization
+## Initialization
 
 ```bash
 npm run build
