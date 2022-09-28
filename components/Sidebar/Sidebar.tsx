@@ -11,12 +11,6 @@ export default function Sidebar({}: Props) {
         <li className={styles.item}>
           <a href="/">Dashboard</a>
         </li>
-        <li className={styles.item}>
-          <a href="/">Placeholder</a>
-        </li>
-        <li className={styles.item}>
-          <a href="/">placeholder</a>
-        </li>
       </ul>
 
       {/* Footer */}
@@ -26,7 +20,9 @@ export default function Sidebar({}: Props) {
           <a href="https://www.linkedin.com/in/ericgarrelts/" target="_blank">
             LinkedIn
           </a>
-          <a>Source Code</a>
+          <a href="https://github.com/EricGarrelts/Todo-App" target="_blank">
+            Source Code
+          </a>
         </div>
       </div>
     </div>
