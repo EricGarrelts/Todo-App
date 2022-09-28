@@ -10,7 +10,7 @@ export default function Sidebar({}: Props) {
       <div className={styles.header}>Todo App</div>
       <ul className={styles.items}>
         <li className={styles.item}>
-          <a href="/">Dashboard</a>
+          <Link href="/">Dashboard</Link>
         </li>
       </ul>
 
@@ -18,11 +18,15 @@ export default function Sidebar({}: Props) {
       <div className={styles.footer}>
         <p>Developed by Eric Garrelts</p>
         <div className={styles.linkcontainer}>
-          <Link href="https://www.linkedin.com/in/ericgarrelts/">
-            <a target="_blank">LinkedIn</a>
+          <Link href="https://www.linkedin.com/in/ericgarrelts/" passHref>
+            <a target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
           </Link>
-          <Link href="https://github.com/EricGarrelts/Todo-App">
-            <a target="_blank">Source Code</a>
+          <Link href="https://github.com/EricGarrelts/Todo-App" passHref>
+            <a target="_blank" rel="noopener noreferrer">
+              Source Code
+            </a>
           </Link>
         </div>
       </div>
